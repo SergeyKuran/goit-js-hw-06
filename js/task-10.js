@@ -16,6 +16,7 @@ const boxEl = document.querySelector('#boxes');
 // При кожній наступній ітерації тег збільшує свій колір фону і розмір на 10px. 
 function createBoxes(amount) {
   let size = 30;
+  boxEl.innerHTML = '';
 
   for (let i = 0; i < amount; i++) {
     const createDivEL = document.createElement('div');

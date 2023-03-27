@@ -1,8 +1,7 @@
-const numberEl = document.querySelector('#categories');
-console.log('Number of categories:', numberEl.children.length);
+const numberEl = document.querySelectorAll('#categories li.item');
+console.log('Number of categories:', numberEl.length);
 
-const findTextEl = document.querySelectorAll('li h2');
-findTextEl.forEach(el => console.log('Category:', el.textContent));
-
-const numbersItemsEl = document.querySelectorAll('.item ul');
-numbersItemsEl.forEach(el => console.log('Elements:', el.children.length));
+numberEl.forEach(element => {
+    console.log(`Gategory: ${element.querySelector('h2').textContent}`);
+    console.log(`Elements: ${element.querySelector('ul').children.length}`);
+});
